@@ -115,7 +115,7 @@ public class Teacher implements Activities{
                 }System.out.println("Found " + student.FName + " " + student.LName + " with registration number " + student.RegNo + " in " + student.Class);
             }
         }
-        if(choice == 2){
+       else if(choice == 2){
             System.out.print("Enter regNO: ");
             s.RegNo = scanner.nextLine();
             for(Student student : students){
