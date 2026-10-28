@@ -66,23 +66,25 @@ public class Teacher implements Activities{
         }
     }
 
-    @Override
-    public void recordMarks(){
-        Student student = new Student();
-        System.out.print("Enter students first Name: ");
-        student.FName = scanner.nextLine();
-        System.out.print("Enter students last Name: ");
-        student.LName = scanner.nextLine();
-        System.out.print("Enter students registration number: ");
-        student.RegNo = scanner.nextLine();
-        System.out.print("Enter students marks: ");
-        student.Marks = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Enter students subject: ");
-        student.Subject = scanner.nextLine();
+@Override
+public void recordMarks(){
+    System.out.print("Enter students registration number: ");
+    String regNo = scanner.nextLine();
 
-        System.out.println(student.FName + " " + student.LName + " with registration number " + student.RegNo + " scored " + student.Marks + " in " + student.Subject);
+    for(Student student : students){
+        if(student.RegNo.equals(regNo)){
+            System.out.print("Enter students marks: ");
+            student.Marks = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Enter students subject: ");
+            student.Subject = scanner.nextLine();
+
+            System.out.println(student.FName + " " + student.LName + " with registration number " + student.RegNo + " scored " + student.Marks + " in " + student.Subject);
+            return;
+        }
     }
+    System.out.println("Student not found!");
+}
 
     @Override
     public void viewRegisteredStudents(){
