@@ -7,21 +7,22 @@ public class Teacher implements Activities{
     String Name;
     String Password;
 
-    @Override
-    public void logIn(){
-        System.out.println("****System Log In *****");
-        System.out.print("Enter your name: ");
-        Name = scanner.nextLine();
-        System.out.print("Enter your password: ");
-        Password = scanner.nextLine();
+ @Override
+public void logIn(){
+    System.out.println("****System Log In *****");
+    System.out.print("Enter your name: ");
+    Name = scanner.nextLine();
+    System.out.print("Enter your password: ");
+    Password = scanner.nextLine();
 
-        if(Password.equals("12345")){
-            System.out.println("****You are logged in*****");
-        }
-        else{
-            System.out.println("**** Failed to logged in!!!!! *****");
-        }
+    if(Password.equals("12345")){
+        System.out.println("****You are logged in*****");
     }
+    else{
+        System.out.println("**** Failed to log in!!!!! *****");
+        System.exit(0);
+    }
+}
 
     @Override
     public void registerStudents(){
