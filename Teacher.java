@@ -111,8 +111,8 @@ public class Teacher implements Activities{
             s.Subject = scanner.nextLine();
             for(Student student : students){
                 if(s.Subject.equals(student.Subject)){
-                    System.out.println("Found " + s.FName + " " + s.LName + " with registration number  " + s.RegNo + " in " + s.Class);
-                }
+                   
+                }System.out.println("Found " + student.FName + " " + student.LName + " with registration number " + student.RegNo + " in " + student.Class);
             }
         }
         if(choice == 2){
@@ -121,7 +121,7 @@ public class Teacher implements Activities{
             for(Student student : students){
 
                 if(student.RegNo.equals(s.RegNo)){
-                    System.out.println("Found " + s.FName + " " + s.LName + " with registration number " + s.RegNo + " in " + s.Class);
+                    System.out.println("Found " + student.FName + " " + student.LName + " with registration number " + student.RegNo + " in " + student.Class);
                 }
             }
 
